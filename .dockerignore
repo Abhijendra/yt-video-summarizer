@@ -1,0 +1,8 @@
+__pycache__
+*.pyc
+.venv
+.git
+.dockerignore
+Dockerfile
+*.ipynb
+sample_outputs
