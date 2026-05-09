@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summarizer</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" sizes="16x16" href="static/images/youtube.png">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Video Summarizer</h1>
+            <p>Paste a YouTube video link to get summary</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="videoLink" 
+                    class="video-input" 
+                    placeholder="Paste YouTube video link here..."
+                    autocomplete="off"
+                >
+                <div class="button-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate Summary</button>
+                    <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Generating summary...</p>
+            </div>
+
+            <div id="resultSection" class="result-section hidden">
+                <label for="summaryText">Summary:</label>
+                <textarea 
+                    id="summaryText" 
+                    class="summary-textarea" 
+                    readonly
+                    rows="15"
+                ></textarea>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+        </main>
+    </div>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>

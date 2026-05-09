@@ -2,7 +2,7 @@ from flask import Flask
 import os 
 from log_config import setup_logging
 from services.youtube_service import *
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 from werkzeug.exceptions import BadRequest, InternalServerError
 
 # import logging 
@@ -111,7 +111,9 @@ def fetch_link():
     
 # def answer_query():
 #     return 
-
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 # ======================================================
 #            MAIN
